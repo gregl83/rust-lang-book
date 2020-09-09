@@ -5,4 +5,5 @@ members = [
     "ch03_01_variables_and_mutability",
     "ch03_02_data_types",
     "ch03_03_how_functions_work",
+    "ch03_04_comments",
 ]
