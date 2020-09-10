@@ -7,4 +7,5 @@ members = [
     "ch03_03_how_functions_work",
     "ch03_04_comments",
     "ch03_05_control_flow",
+    "ch04_01_what_is_ownership",
 ]
