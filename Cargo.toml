@@ -8,4 +8,5 @@ members = [
     "ch03_04_comments",
     "ch03_05_control_flow",
     "ch04_01_what_is_ownership",
+    "ch04_02_references_and_borrowing",
 ]
