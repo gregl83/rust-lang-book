@@ -10,4 +10,5 @@ members = [
     "ch04_01_what_is_ownership",
     "ch04_02_references_and_borrowing",
     "ch04_03_slices",
+    "ch05_01_defining_structs",
 ]
