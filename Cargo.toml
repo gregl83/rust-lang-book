@@ -11,4 +11,5 @@ members = [
     "ch04_02_references_and_borrowing",
     "ch04_03_slices",
     "ch05_01_defining_structs",
+    "ch05_02_example_structs",
 ]
