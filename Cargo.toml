@@ -14,4 +14,5 @@ members = [
     "ch05_02_example_structs",
     "ch05_03_method_syntax",
     "ch06_01_defining_an_enum",
+    "ch06_02_match",
 ]
