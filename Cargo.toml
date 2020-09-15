@@ -12,4 +12,5 @@ members = [
     "ch04_03_slices",
     "ch05_01_defining_structs",
     "ch05_02_example_structs",
+    "ch05_03_method_syntax",
 ]
