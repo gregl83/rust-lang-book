@@ -16,4 +16,5 @@ members = [
     "ch06_01_defining_an_enum",
     "ch06_02_match",
     "ch06_03_if_let",
+    "ch07_02_defining_modules_to_control_scope_and_privacy",
 ]
