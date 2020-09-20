@@ -18,4 +18,5 @@ members = [
     "ch06_03_if_let",
     "ch07_02_defining_modules_to_control_scope_and_privacy",
     "ch07_03_paths_for_referring_to_an_item_in_the_module_tree",
+    "ch07_04_bringing_paths_into_scope_with_the_use_keyword",
 ]
