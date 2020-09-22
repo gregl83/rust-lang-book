@@ -21,4 +21,5 @@ members = [
     "ch07_04_bringing_paths_into_scope_with_the_use_keyword",
     "ch07_05_separating_modules_into_different_files",
     "ch08_01_vectors",
+    "ch08_02_strings",
 ]
