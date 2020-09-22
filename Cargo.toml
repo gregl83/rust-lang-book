@@ -22,4 +22,5 @@ members = [
     "ch07_05_separating_modules_into_different_files",
     "ch08_01_vectors",
     "ch08_02_strings",
+    "ch08_03_hash_maps",
 ]
