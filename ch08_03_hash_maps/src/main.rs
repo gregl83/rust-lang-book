@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+mod math;
 
 fn main() {
     // hashmap new w/inserting
@@ -77,4 +78,13 @@ fn main() {
     }
 
     println!("{:?}", map);
+
+    let a = 7 % 2;
+    println!("{}", a);
+
+    let vector = vec![1.0, 2.0, 3.0];
+    println!("mean: {}", math::vectors::mean(vector));
+
+    let vector = vec![1.0, 2.0, 3.0, 4.0];
+    println!("median: {}", math::vectors::median(vector));
 }
