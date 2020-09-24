@@ -29,10 +29,15 @@ pub mod vectors {
         let mut results = vec![];
         let mut counts = HashMap::new();
         for value in values {
-            let count = counts.entry(value).or_insert(0);
+            let count: &mut i32 = counts.entry(value).or_insert(0);
             *count += 1;
         }
-        // fixme
+        let max: i32 = counts.iter().map(|v| *v.1).fold(0, i32::max);
+        for (value, count) in counts {
+            if max == count {
+                results.push(value);
+            }
+        }
         results
     }
 }

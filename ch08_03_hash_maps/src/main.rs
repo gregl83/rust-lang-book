@@ -83,8 +83,11 @@ fn main() {
     println!("{}", a);
 
     let vector = vec![1.0, 2.0, 3.0];
-    println!("mean: {}", math::vectors::mean(vector));
+    println!("mean: {:?}", math::vectors::mean(vector));
 
     let vector = vec![1.0, 2.0, 3.0, 4.0];
-    println!("median: {}", math::vectors::median(vector));
+    println!("median: {:?}", math::vectors::median(vector));
+
+    let vector = vec![1, 2, 3, 4, 2, 3];
+    println!("mode: {:?}", math::vectors::mode(vector));
 }
