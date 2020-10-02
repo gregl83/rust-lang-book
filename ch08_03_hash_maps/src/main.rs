@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 mod math;
+mod language;
 
 fn main() {
     // hashmap new w/inserting
@@ -79,9 +80,7 @@ fn main() {
 
     println!("{:?}", map);
 
-    let a = 7 % 2;
-    println!("{}", a);
-
+    // vector math
     let vector = vec![1.0, 2.0, 3.0];
     println!("mean: {:?}", math::vectors::mean(vector));
 
@@ -90,4 +89,9 @@ fn main() {
 
     let vector = vec![1, 2, 3, 4, 2, 3];
     println!("mode: {:?}", math::vectors::mode(vector));
+
+    // utf8 text to pig latin
+    let text = "to be or not to be, that is the question";
+    let pig_latin = language::translate::to_pig_latin(text);
+    println!("pig latin: {}", pig_latin);
 }
