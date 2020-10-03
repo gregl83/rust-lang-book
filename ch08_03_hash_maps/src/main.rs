@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 mod math;
-mod language;
+mod languages;
 
 fn main() {
     // hashmap new w/inserting
@@ -92,6 +92,6 @@ fn main() {
 
     // utf8 text to pig latin
     let text = "to be or not to be, that is the question";
-    let pig_latin = language::translate::to_pig_latin(text);
-    println!("pig latin: {}", pig_latin);
+    let pig_latin = languages::english::to_pig_latin(text);
+    println!("english to pig latin: {}", pig_latin);
 }
