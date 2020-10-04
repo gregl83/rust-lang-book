@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 mod math;
 mod languages;
+mod organization;
 
 fn main() {
     // hashmap new w/inserting
@@ -94,4 +95,33 @@ fn main() {
     let text = "to be or not to be, that is the question";
     let pig_latin = languages::english::to_pig_latin(text);
     println!("english to pig latin: {}", pig_latin);
+
+    // organization departments and members
+    let mut departments = organization::Departments::new();
+
+    departments.add_member(
+        String::from("astronauts"),
+        String::from("Neil Armstrong")
+    );
+    departments.add_member(
+        String::from("astronauts"),
+        String::from("Gregory Langlais")
+    );
+    departments.add_member(
+        String::from("mission-control"),
+        String::from("Gene Kranz")
+    );
+    departments.add_member(
+        String::from("astronauts"),
+        String::from("Buzz Aldrin")
+    );
+
+    println!("{:?}", departments);
+
+    departments.remove_member(
+        String::from("astronauts"),
+        String::from("Gregory Langlais")
+    );
+
+    println!("{:?}", departments);
 }
