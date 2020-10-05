@@ -23,4 +23,5 @@ members = [
     "ch08_01_vectors",
     "ch08_02_strings",
     "ch08_03_hash_maps",
+    "ch09_01_unrecoverable_errors_with_panic",
 ]
