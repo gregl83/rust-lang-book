@@ -27,4 +27,5 @@ members = [
     "ch09_02_recoverable_errors_with_result",
     "ch09_03_to_panic_or_not_to_panic",
     "ch10_00_generics",
+    "ch10_01_syntax",
 ]
