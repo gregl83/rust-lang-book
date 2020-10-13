@@ -26,4 +26,5 @@ members = [
     "ch09_01_unrecoverable_errors_with_panic",
     "ch09_02_recoverable_errors_with_result",
     "ch09_03_to_panic_or_not_to_panic",
+    "ch10_00_generics",
 ]
