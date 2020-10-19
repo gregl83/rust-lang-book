@@ -29,4 +29,5 @@ members = [
     "ch10_00_generics",
     "ch10_01_syntax",
     "ch10_02_traits",
+    "ch10_03_lifetime_syntax",
 ]
