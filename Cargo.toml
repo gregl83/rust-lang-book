@@ -31,4 +31,5 @@ members = [
     "ch10_02_traits",
     "ch10_03_lifetime_syntax",
     "ch11_01_writing_tests",
+    "ch11_02_running_tests",
 ]
