@@ -32,4 +32,5 @@ members = [
     "ch10_03_lifetime_syntax",
     "ch11_01_writing_tests",
     "ch11_02_running_tests",
+    "ch11_03_test_organization",
 ]
