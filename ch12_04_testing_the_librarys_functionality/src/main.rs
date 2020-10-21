@@ -1,7 +1,7 @@
 use std::process;
 use std::env;
 
-use ch12_03_improving_error_handling_and_modularity::{Config, run};
+use ch12_04_testing_the_librarys_functionality::{Config, run};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
