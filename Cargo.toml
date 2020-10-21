@@ -35,4 +35,5 @@ members = [
     "ch11_03_test_organization",
     "ch12_01_accepting_command_line_arguments",
     "ch12_02_reading_a_file",
+    "ch12_03_improving_error_handling_and_modularity",
 ]
