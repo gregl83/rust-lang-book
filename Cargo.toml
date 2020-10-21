@@ -34,4 +34,5 @@ members = [
     "ch11_02_running_tests",
     "ch11_03_test_organization",
     "ch12_01_accepting_command_line_arguments",
+    "ch12_02_reading_a_file",
 ]
