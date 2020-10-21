@@ -37,4 +37,5 @@ members = [
     "ch12_02_reading_a_file",
     "ch12_03_improving_error_handling_and_modularity",
     "ch12_04_testing_the_librarys_functionality",
+    "ch12_05_working_with_environment_variables",
 ]
