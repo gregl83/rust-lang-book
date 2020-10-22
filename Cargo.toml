@@ -42,5 +42,4 @@ members = [
     "ch13_01_closures",
     "ch13_02_iterators",
     "ch13_03_improving_our_io_project",
-    "ch13_04_performance",
 ]
