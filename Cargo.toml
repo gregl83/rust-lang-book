@@ -39,4 +39,5 @@ members = [
     "ch12_04_testing_the_librarys_functionality",
     "ch12_05_working_with_environment_variables",
     "ch12_06_writing_to_stderr_instead_of_stdout",
+    "ch13_01_closures",
 ]
