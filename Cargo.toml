@@ -43,4 +43,5 @@ members = [
     "ch13_02_iterators",
     "ch13_03_improving_our_io_project",
     "ch14_01_release_profiles",
+    "ch14_02_publishing_to_crates_io",
 ]
