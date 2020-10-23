@@ -1,3 +1,11 @@
+[package]
+name = "the-book"
+version = "0.1.0"
+authors = ["Gregory Langlais <admin@gregorylanglais.com>"]
+edition = "2018"
+description = "Rust Book"
+license = "MIT"
+
 [workspace]
 members = [
     "ch01_02_hello_world",
