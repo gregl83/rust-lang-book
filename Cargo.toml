@@ -53,4 +53,5 @@ members = [
     "ch14_01_release_profiles",
     "ch14_02_publishing_to_crates_io",
     "ch14_03_cargo_workspaces",
+    "ch15_01_box",
 ]
