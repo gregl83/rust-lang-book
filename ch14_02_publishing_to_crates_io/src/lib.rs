@@ -1,3 +1,7 @@
+//! # ch 14.02 - publishing to crates.io
+//!
+//! using crates.io to document, test, and publish code
+
 /// Returns one as unsigned 8 byte int
 ///
 /// # Examples
