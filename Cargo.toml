@@ -1,11 +1,3 @@
-[package]
-name = "the-book"
-version = "0.1.0"
-authors = ["Gregory Langlais <admin@gregorylanglais.com>"]
-edition = "2018"
-description = "Rust Book"
-license = "MIT"
-
 [workspace]
 members = [
     "ch01_02_hello_world",
@@ -52,6 +44,6 @@ members = [
     "ch13_03_improving_our_io_project",
     "ch14_01_release_profiles",
     "ch14_02_publishing_to_crates_io",
-    "ch14_03_cargo_workspaces",
+    #"ch14_03_cargo_workspaces",
     "ch15_01_box",
 ]
