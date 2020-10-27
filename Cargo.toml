@@ -46,4 +46,5 @@ members = [
     "ch14_02_publishing_to_crates_io",
     #"ch14_03_cargo_workspaces",
     "ch15_01_box",
+    "ch15_02_deref",
 ]
