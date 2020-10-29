@@ -47,4 +47,5 @@ members = [
     #"ch14_03_cargo_workspaces",
     "ch15_01_box",
     "ch15_02_deref",
+    "ch15_03_drop",
 ]
