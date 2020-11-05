@@ -15,3 +15,7 @@ impl<T> MyBox<T> {
         MyBox(x)
     }
 }
+
+pub fn hello(name: &str) {
+    println!("Hello, {}!", name);
+}
