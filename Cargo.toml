@@ -50,4 +50,5 @@ members = [
     "ch15_03_drop",
     "ch15_04_rc",
     "ch15_05_interior_mutability",
+    "ch15_06_reference_cycles",
 ]
