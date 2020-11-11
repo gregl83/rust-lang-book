@@ -1,9 +1,7 @@
 fn main() {
     let mut a = 1;
-    let mut b = &a;
-    let mut c = &a;
-
-    a = 3;
+    let b = &a;
+    let c = &a;
 
     println!("{}, {}, {}", a, b, c);
 
