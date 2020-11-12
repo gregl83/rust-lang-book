@@ -53,4 +53,5 @@ members = [
     "ch15_06_reference_cycles",
     "ch16_01_threads",
     "ch16_02_message_passing",
+    "ch16_03_shared_state",
 ]
