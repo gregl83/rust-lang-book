@@ -52,4 +52,5 @@ members = [
     "ch15_05_interior_mutability",
     "ch15_06_reference_cycles",
     "ch16_01_threads",
+    "ch16_02_message_passing",
 ]
