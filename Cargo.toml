@@ -44,11 +44,12 @@ members = [
     "ch13_03_improving_our_io_project",
     "ch14_01_release_profiles",
     "ch14_02_publishing_to_crates_io",
-    #"ch14_03_cargo_workspaces",
+    #"ch14_03_cargo_workspaces", breaks due to project workspace
     "ch15_01_box",
     "ch15_02_deref",
     "ch15_03_drop",
     "ch15_04_rc",
     "ch15_05_interior_mutability",
     "ch15_06_reference_cycles",
+    "ch16_01_threads",
 ]
