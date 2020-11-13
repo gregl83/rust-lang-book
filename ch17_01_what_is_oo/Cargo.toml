@@ -1,5 +1,5 @@
 [package]
-name = "ch16_04_extensible_concurrency_sync_and_send"
+name = "ch17_01_what_is_oo"
 version = "0.1.0"
 authors = ["Gregory Langlais <general@gregorylanglais.com>"]
 edition = "2018"

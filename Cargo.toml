@@ -54,5 +54,5 @@ members = [
     "ch16_01_threads",
     "ch16_02_message_passing",
     "ch16_03_shared_state",
-    "ch16_04_extensible_concurrency_sync_and_send",
+    "ch17_01_what_is_oo",
 ]
