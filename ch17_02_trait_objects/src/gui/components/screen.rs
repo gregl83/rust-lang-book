@@ -1,14 +1,12 @@
 use crate::gui::components::Drawable;
 
-#[derive(Debug)]
-pub struct Screen<T: Drawable> {
-    pub components: Vec<T>,
+type DrawableList = Vec<Box<dyn Drawable>>;
+
+pub struct Screen {
+    pub components: DrawableList,
 }
 
-impl<T> Screen<T>
-    where
-        T: Drawable,
-{
+impl Screen {
     pub fn run(&self) {
         for component in self.components.iter() {
             component.draw();
