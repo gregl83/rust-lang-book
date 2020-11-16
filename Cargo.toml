@@ -55,5 +55,6 @@ members = [
     "ch16_02_message_passing",
     "ch16_03_shared_state",
     "ch17_01_what_is_oo",
-    "ch17_02_trait_objects"
+    "ch17_02_trait_objects",
+    "ch17_03_oo_design_patterns"
 ]
