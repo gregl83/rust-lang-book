@@ -19,6 +19,8 @@ impl SelectBox {
 
 impl Drawable for SelectBox {
     fn draw(&self) {
+        println!("Drawing SelectBox");
+
         // code to actually draw a select box
     }
 }

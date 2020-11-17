@@ -19,6 +19,8 @@ impl Button {
 
 impl Drawable for Button {
     fn draw(&self) {
+        println!("Drawing Button");
+
         // code to actually draw a button
     }
 }

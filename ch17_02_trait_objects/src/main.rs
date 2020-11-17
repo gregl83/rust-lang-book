@@ -7,6 +7,8 @@ use crate::gui::{
 };
 
 fn main() {
+    println!("Creating Screen");
+
     let screen = Screen {
         components: vec![
             Box::new(SelectBox::new(

@@ -8,6 +8,7 @@ pub struct Screen {
 
 impl Screen {
     pub fn run(&self) {
+        println!("Running Screen");
         for component in self.components.iter() {
             component.draw();
         }
