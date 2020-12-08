@@ -18,6 +18,19 @@ fn if_let_pattern() {
     }
 }
 
+fn while_let_pattern() {
+    let mut stack = Vec::new();
+
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    while let Some(top) = stack.pop() {
+        println!("{}", top);
+    }
+}
+
 fn main() {
     if_let_pattern();
+    while_let_pattern();
 }
