@@ -58,5 +58,6 @@ members = [
     "ch17_02_trait_objects",
     "ch17_03_oo_design_patterns",
     "ch18_01_all_the_places_for_patterns",
-    "ch18_02_refutability"
+    "ch18_02_refutability",
+    "ch18_03_pattern_syntax"
 ]
