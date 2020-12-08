@@ -188,6 +188,31 @@ fn ignore_remaining_parts(p: PointThreeDimensions, t: (i32, i32, i32, i32, i32))
     // }
 }
 
+fn match_guards(num: Option<i32>) {
+    match num {
+        Some(x) if x < 5 => println!("less than five: {}", x),
+        Some(x) => println!("{}", x),
+        None => (),
+    }
+}
+
+fn match_guards_shadowed(x: Option<i32>, y: i32) {
+    match x {
+        Some(50) => println!("Got 50"),
+        Some(n) if n == y => println!("Matched, n = {}", n),
+        _ => println!("Default case, x = {:?}", x),
+    }
+
+    println!("at the end: x = {:?}, y = {}", x, y);
+}
+
+fn match_guard_multiple_patterns(x: i32, y: bool) {
+    match x {
+        4 | 5 | 6 if y => println!("yes"),
+        _ => println!("no"),
+    }
+}
+
 fn main() {
     matching_literals(1); // useful for concrete values
     matching_named_variables(Some(5), 10); // be wary of shadowing mistakes w/scope
@@ -204,5 +229,8 @@ fn main() {
     ignore_parts_of_value(Some(5), Some(10)); // pattern to set if not set or match partial
     ignore_unused_variable_unbound(1, 2); // prevent rust warning on unused variable (great for prototype etc..)
     ignore_unused_variable_bound(Some(String::from("Hello"))); // prevent rust warning on unused variable but still bound/moved
-    ignore_remaining_parts(PointThreeDimensions { x: 0, y: 0, z: 0}, (2, 4, 8, 16, 32)); // use .. to expand to avoid listing every field after selection or as range of fields
+    ignore_remaining_parts(PointThreeDimensions { x: 0, y: 0, z: 0 }, (2, 4, 8, 16, 32)); // use .. to expand to avoid listing every field after selection or as range of fields
+    match_guards(Some(4)); // match guards allow for more complex patterns
+    match_guards_shadowed(Some(5), 10); // match guard to handle pattern value shadowing
+    match_guard_multiple_patterns(4, false); // match guard can be used with multiple patterns
 }
