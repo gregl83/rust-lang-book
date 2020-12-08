@@ -213,6 +213,22 @@ fn match_guard_multiple_patterns(x: i32, y: bool) {
     }
 }
 
+enum StructMessage {
+    Hello { id: i32},
+}
+
+fn at_binding(msg: StructMessage) {
+    match msg {
+        Message::Hello {
+            id: id_variable @ 3..=7,
+        } => println!("Found an id in range: {}", id_variable),
+        Message::Hello { id: 10..=12 } => {
+            println!("Found an id in another range")
+        }
+        Message::Hello { id } => println!("Found some other id: {}", id),
+    }
+}
+
 fn main() {
     matching_literals(1); // useful for concrete values
     matching_named_variables(Some(5), 10); // be wary of shadowing mistakes w/scope
@@ -233,4 +249,5 @@ fn main() {
     match_guards(Some(4)); // match guards allow for more complex patterns
     match_guards_shadowed(Some(5), 10); // match guard to handle pattern value shadowing
     match_guard_multiple_patterns(4, false); // match guard can be used with multiple patterns
+    at_binding(StructMessage::Hello { id: 5 }); // at binding creates variable that holds value as same time we're testing value for pattern match (test and save)
 }
