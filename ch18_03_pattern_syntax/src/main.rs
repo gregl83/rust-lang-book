@@ -119,6 +119,75 @@ fn destruct_nested_structs_and_enums(msg: NestedMessage) {
     }
 }
 
+fn destruct_structs_and_tuples() {
+    let ((feet, inches), Point { x, y }) = ((3, 10), Point { x: 3, y: -10 });
+    println!("({}, {}), x: {}, y: {}", feet, inches, x, y);
+}
+
+fn ignore_entire_value(_: i32, y: i32) {
+    println!("This code only uses the y parameter: {}", y);
+}
+
+fn ignore_parts_of_value(mut setting_value: Option<i32>, new_setting_value: Option<i32>) {
+    match (setting_value, new_setting_value) {
+        (Some(_), Some(_)) => {
+            println!("Can't overwrite an existing customized value");
+        }
+        _ => {
+            setting_value = new_setting_value;
+        }
+    }
+
+    println!("setting is {:?}", setting_value);
+
+    let numbers = (2, 4, 8, 16, 32);
+
+    match numbers {
+        (first, _, third, _, fifth) => {
+            println!("Some numbers: {}, {}, {}", first, third, fifth)
+        }
+    }
+}
+
+fn ignore_unused_variable_unbound(x: i32, _: i32) {
+    // _ is unbound
+    println!("used: {}", x);
+}
+
+fn ignore_unused_variable_bound(s: Option<String>) {
+    // _s is bound
+    if let Some(_s) = s {
+        println!("found a string");
+    }
+
+    // println!("{:?}", s); - cannot work because assignment/move occurs in if let (bound)
+}
+
+struct PointThreeDimensions {
+    x: i32,
+    y: i32,
+    z: i32
+}
+
+fn ignore_remaining_parts(p: PointThreeDimensions, t: (i32, i32, i32, i32, i32)) {
+    match p {
+        PointThreeDimensions { x, .. } => println!("x is {}", x),
+    }
+
+    match t {
+        (first, .., last) => {
+            println!("Some numbers: {}, {}", first, last);
+        }
+    }
+
+    // range pattern match must be ambiguous or error is raised
+    // match t {
+    //     (.., second, ..) => {
+    //         println!("Some numbers: {}", second)
+    //     },
+    // }
+}
+
 fn main() {
     matching_literals(1); // useful for concrete values
     matching_named_variables(Some(5), 10); // be wary of shadowing mistakes w/scope
@@ -130,4 +199,10 @@ fn main() {
     destruct_struct_with_literal_matching(Point { x: 0, y: 7 }); // struct matching patterns using destruct
     destruct_enums(Message::ChangeColor(0, 160, 255)); // enum destruct requires corresponding pattern
     destruct_nested_structs_and_enums(NestedMessage::ChangeColor(Color::Hsv(0, 160, 255))); // nested destruct patterns syntax sugar
+    destruct_structs_and_tuples(); // destruct pattern with both structs and tuples
+    ignore_entire_value(3, 4); // useful for trait function signature or third-party code
+    ignore_parts_of_value(Some(5), Some(10)); // pattern to set if not set or match partial
+    ignore_unused_variable_unbound(1, 2); // prevent rust warning on unused variable (great for prototype etc..)
+    ignore_unused_variable_bound(Some(String::from("Hello"))); // prevent rust warning on unused variable but still bound/moved
+    ignore_remaining_parts(PointThreeDimensions { x: 0, y: 0, z: 0}, (2, 4, 8, 16, 32)); // use .. to expand to avoid listing every field after selection or as range of fields
 }
