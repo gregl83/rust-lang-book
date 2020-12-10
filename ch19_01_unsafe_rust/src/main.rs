@@ -67,6 +67,38 @@ pub extern "C" fn call_from_c() {
     println!("Just called a Rust function from C!");
 }
 
+static HELLO_WORLD: &str = "Hello, world!";
+
+fn global_variable() {
+    println!("name is: {}", HELLO_WORLD);
+}
+
+static mut COUNTER: u32 = 0;
+
+fn add_to_count(inc: u32) {
+    unsafe {
+        COUNTER += inc;
+    }
+}
+
+fn global_mutable_variable() {
+    add_to_count(3);
+
+    unsafe {
+        println!("COUNTER: {}", COUNTER);
+    }
+}
+
+// unsafe traits:
+
+unsafe trait Foo {
+    // methods go here
+}
+
+unsafe impl Foo for i32 {
+    // method implementations go here
+}
+
 fn main() {
     deference_raw_pointer();
 
@@ -77,4 +109,8 @@ fn main() {
     unsafe_abstraction();
 
     extern_code_execution();
+
+    global_variable();
+
+    global_mutable_variable();
 }
