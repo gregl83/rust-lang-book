@@ -16,8 +16,12 @@ impl Iterator for Counter {
     }
 }
 
-fn main() {
+fn trait_types() {
     let counter = Counter {};
 
     println!("counter: {:?}", counter);
+}
+
+fn main() {
+    trait_types();
 }
