@@ -145,6 +145,19 @@ fn super_traits() {
     point.outline_print();
 }
 
+struct Wrapper(Vec<String>);
+
+impl fmt::Display for Wrapper {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "[{}]", self.0.join(", "))
+    }
+}
+
+fn newtype_pattern_external_traits() {
+    let w = Wrapper(vec![String::from("hello"), String::from("world")]);
+    println!("w = {}", w);
+}
+
 fn main() {
     trait_types();
 
@@ -153,4 +166,6 @@ fn main() {
     fully_qualified_syntax();
 
     super_traits();
+
+    newtype_pattern_external_traits();
 }
