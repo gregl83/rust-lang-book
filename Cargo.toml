@@ -63,5 +63,6 @@ members = [
     "ch19_01_unsafe_rust",
     "ch19_03_advanced_traits",
     "ch19_04_advanced_types",
-    "ch19_05_advanced_functions_and_closures"
+    "ch19_05_advanced_functions_and_closures",
+    "ch19_06_macros",
 ]
