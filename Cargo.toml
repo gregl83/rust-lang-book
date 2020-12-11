@@ -62,5 +62,6 @@ members = [
     "ch18_03_pattern_syntax",
     "ch19_01_unsafe_rust",
     "ch19_03_advanced_traits",
-    "ch19_04_advanced_types"
+    "ch19_04_advanced_types",
+    "ch19_05_advanced_functions_and_closures"
 ]
