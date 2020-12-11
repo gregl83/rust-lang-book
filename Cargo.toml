@@ -66,5 +66,6 @@ members = [
     "ch19_05_advanced_functions_and_closures",
     "ch19_06_macros",
     "ch20_01_single_threaded",
-    "ch20_02_multithreaded"
+    "ch20_02_multithreaded",
+    "ch20_03_graceful_shutdown_and_cleanup"
 ]
