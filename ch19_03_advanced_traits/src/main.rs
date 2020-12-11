@@ -1,3 +1,4 @@
+use std::fmt;
 use std::ops::Add;
 
 trait Iterator {
@@ -111,10 +112,45 @@ fn fully_qualified_syntax() {
     // <Type as Trait>::function(receiver_if_method, next_arg, ...);
 }
 
+trait OutlinePrint: fmt::Display {
+    fn outline_print(&self) {
+        let output = self.to_string();
+        let len = output.len();
+        println!("{}", "*".repeat(len + 4));
+        println!("*{}*", " ".repeat(len + 2));
+        println!("* {} *", output);
+        println!("*{}*", " ".repeat(len + 2));
+        println!("{}", "*".repeat(len + 4));
+    }
+}
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl fmt::Display for Point {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "({}, {})", self.x, self.y)
+    }
+}
+
+impl OutlinePrint for Point {}
+
+fn super_traits() {
+    let point = Point {
+        x: 1,
+        y: 2,
+    };
+    point.outline_print();
+}
+
 fn main() {
     trait_types();
 
     default_type_overload_overwrite();
 
     fully_qualified_syntax();
+
+    super_traits();
 }
