@@ -3,7 +3,7 @@ use std::net::TcpListener;
 use std::net::TcpStream;
 use std::fs;
 
-use ch20_02_multithreaded::ThreadPool;
+use ch20_03_graceful_shutdown_and_cleanup::ThreadPool;
 
 fn handle_connection(mut stream: TcpStream) {
     let mut buffer = [0; 1024];
