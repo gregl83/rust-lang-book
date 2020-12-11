@@ -61,5 +61,6 @@ members = [
     "ch18_02_refutability",
     "ch18_03_pattern_syntax",
     "ch19_01_unsafe_rust",
-    "ch19_03_advanced_traits"
+    "ch19_03_advanced_traits",
+    "ch19_04_advanced_types"
 ]
