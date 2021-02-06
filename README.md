@@ -25,7 +25,7 @@ A Rust Book chapter package has been created in this repository workspace for ch
 
 Path Convention: `rust-lang-book/<chapter-uri-path>`
 
-The Rust Language Book itself is included as a GIT submodule. This tethers chapter work to a specific verison of the book.
+The Rust Language Book itself is included as a GIT submodule. This tethers chapter work to a specific version of the book.
 
 *Hint: use mdbook for stable references even if outdated*
 
