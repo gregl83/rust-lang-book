@@ -36,4 +36,5 @@ The Rust Language Book itself is included as a GIT submodule. This tethers chapt
 - [Cargo](https://doc.rust-lang.org/cargo/)
 
 ## License
-MIT
+
+[MIT](LICENSE)
